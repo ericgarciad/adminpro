@@ -23,7 +23,7 @@ const routes: Routes = [
             { path: '', component: DashboardComponent },
             { path: 'progress', component: ProgressComponent },
             { path: 'grafica1', component: Grafica1Component },
-            //Esto ya no nos sirve
+            //Esto ya no nos sirve aqui, ahora lo usamos en app-routing.module.ts
             //{ path: '', redirectTo: '/dashboard', pathMatch: 'full' }, //si no hay ruta ira a dashboard
         ]
     },
