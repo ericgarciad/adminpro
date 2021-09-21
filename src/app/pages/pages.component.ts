@@ -1,6 +1,11 @@
 //Estas paginas se mostrarán cuando yo esté autenticado.
 
 import { Component, OnInit } from '@angular/core';
+import { SettingsService } from '../services/settings.service';
+
+//Para que typescript n ose queje al usar una función global (Esta dentro de assets/js/custom.js)
+//hacemos el declare
+declare function customInitFunctions():any;
 
 @Component({
   selector: 'app-pages',
@@ -10,9 +15,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PagesComponent implements OnInit {
 
-  constructor() { }
+//Creamos acceso al Service
+  constructor(private setigsService: SettingsService ) { }
 
   ngOnInit(): void {
+    customInitFunctions();
   }
 
 }
