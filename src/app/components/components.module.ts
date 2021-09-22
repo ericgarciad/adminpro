@@ -7,13 +7,14 @@ import { ChartsModule } from 'ng2-charts';
 
 import { IncrementadorComponent } from './incrementador/incrementador.component';
 import { DonutgraficaComponent } from './donutgrafica/donutgrafica.component';
+import { PromesasComponent } from './promesas/promesas.component';
 
 
 
 @NgModule({
   declarations: [
     IncrementadorComponent,
-    DonutgraficaComponent
+    DonutgraficaComponent,
   ],
   exports: [
     IncrementadorComponent,

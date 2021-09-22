@@ -7,6 +7,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { ProgressComponent } from './progress/progress.component';
 import { Grafica1Component } from './grafica1/grafica1.component';
 import { AccountSettingsComponent } from './account-settings/account-settings.component';
+import { PromesasComponent } from '../components/promesas/promesas.component';
+import { RxjsComponent } from './rxjs/rxjs.component';
 
 const routes: Routes = [
 
@@ -21,10 +23,12 @@ const routes: Routes = [
         children: [
             //Rutas protegidas
             //Entonces aqui dejamos dashboard vació por defecto para que sea la ruta principal
-            { path: '', component: DashboardComponent },
-            { path: 'progress', component: ProgressComponent },
-            { path: 'grafica1', component: Grafica1Component },
-            { path: 'account-settings', component: AccountSettingsComponent },
+            { path: '', component: DashboardComponent, data: {titulo: 'Dashboard'} },
+            { path: 'progress', component: ProgressComponent, data: {titulo: 'ProgressBar'} },
+            { path: 'grafica1', component: Grafica1Component, data: {titulo: 'Grafica #1'} },
+            { path: 'account-settings', component: AccountSettingsComponent, data: {titulo: 'Ajustes de tema'} },
+            { path: 'promesas', component: PromesasComponent, data: {titulo: 'Promesas'} },
+            { path: 'rxjs', component: RxjsComponent, data: {titulo: 'RXJS'} },
             //Esto ya no nos sirve aqui, ahora lo usamos en app-routing.module.ts
             //{ path: '', redirectTo: '/dashboard', pathMatch: 'full' }, //si no hay ruta ira a dashboard
         ]
